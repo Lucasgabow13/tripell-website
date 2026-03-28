@@ -13,7 +13,7 @@ export default function ContactPage() {
           {/* Left — copy */}
           <div className="flex flex-col gap-8">
             <div>
-              <span className="text-xs uppercase tracking-[0.2em] text-neutral-400 block mb-6">
+              <span className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium block mb-6">
                 Get In Touch
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.08]">
@@ -32,14 +32,14 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="border-t border-neutral-100 pt-8 flex flex-col gap-3">
-              <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+              <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium">
                 Prefer email?
               </p>
               <a
-                href="mailto:info@tripellpartners.com"
+                href="mailto:info@ironmark.capital"
                 className="text-sm text-black hover:opacity-50 transition-opacity duration-200"
               >
-                info@tripellpartners.com
+                info@ironmark.capital
               </a>
             </div>
           </div>

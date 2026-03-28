@@ -1,6 +1,8 @@
+"use client";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import FadeInUp from "@/components/FadeInUp";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 const PARAMETERS = [
   { value: "$1M–$5M", label: "Target EBITDA" },
@@ -74,7 +76,7 @@ export default function InvestmentCriteriaPage() {
       {/* Hero */}
       <section className="relative bg-neutral-900 text-white pt-40 pb-24 lg:pt-52 lg:pb-32 px-[3vw]">
         <div className="max-w-[1500px] mx-auto">
-          <span className="text-xs uppercase tracking-[0.2em] text-white/40 block mb-8">
+          <span className="text-sm uppercase tracking-[0.2em] text-white/60 font-medium block mb-8">
             Investment Criteria
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-[5.5rem] font-medium leading-[1.08] max-w-3xl mb-6">
@@ -108,17 +110,20 @@ export default function InvestmentCriteriaPage() {
       {/* The 6 Criteria */}
       <section className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
         <div className="flex items-center justify-between border-t border-neutral-200 pt-6 mb-12">
-          <span className="text-xs uppercase tracking-[0.2em]">
+          <span className="text-sm uppercase tracking-[0.2em] font-medium">
             What We Look For
           </span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {CRITERIA.map((item, i) => (
             <FadeInUp key={item.num} delay={i * 0.08}>
             <div
-              className="bg-white p-8 md:p-10 flex flex-col gap-6 group hover:bg-neutral-50 transition-colors duration-200"
+              className="bg-white p-8 md:p-10 flex flex-col gap-6 group hover:bg-neutral-50 transition-all duration-300 relative overflow-hidden border border-neutral-100"
             >
-              <span className="text-xs text-neutral-300 tracking-[0.2em] font-mono">
+              {/* Black accent bar — reveals on hover */}
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-[#0a0a0a] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]" />
+
+              <span className="text-xs text-neutral-300 tracking-[0.2em] font-mono group-hover:text-[#0a0a0a] transition-colors duration-300">
                 {item.num}
               </span>
               <div className="flex flex-col gap-3">
@@ -189,7 +194,7 @@ export default function InvestmentCriteriaPage() {
 
       {/* Philosophy */}
       <section className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
-        <span className="text-xs uppercase tracking-[0.2em] text-neutral-400 block mb-16">
+        <span className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium block mb-16">
           Why It Matters
         </span>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-24">
@@ -227,12 +232,14 @@ export default function InvestmentCriteriaPage() {
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-medium leading-[1.1] max-w-2xl">
               Tell us about your business.
             </h2>
-            <a
-              href="/contact"
-              className="shrink-0 text-xs uppercase tracking-[0.15em] px-8 py-4 border border-white text-white hover:bg-white hover:text-black transition-all duration-300"
+            <HoverBorderGradient
+              as="a"
+              containerClassName="cursor-pointer"
+              className="text-xs uppercase tracking-[0.15em] px-8 py-4 bg-[#0a0a0a] text-white"
+              onClick={() => { window.location.href = '/contact'; }}
             >
               Get In Touch
-            </a>
+            </HoverBorderGradient>
           </div>
         </div>
       </section>

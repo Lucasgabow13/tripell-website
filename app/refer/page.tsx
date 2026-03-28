@@ -47,7 +47,7 @@ export default function ReferPage() {
       {/* Hero */}
       <section className="relative bg-neutral-900 text-white pt-40 pb-24 lg:pt-52 lg:pb-32 px-[3vw]">
         <div className="max-w-[1500px] mx-auto">
-          <span className="text-xs uppercase tracking-[0.2em] text-white/40 block mb-8">
+          <span className="text-sm uppercase tracking-[0.2em] text-white/60 font-medium block mb-8">
             Refer a Deal
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-[5.5rem] font-medium leading-[1.08] max-w-3xl mb-6">
@@ -64,7 +64,7 @@ export default function ReferPage() {
       {/* Benefits */}
       <section className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
         <div className="flex items-center justify-between border-t border-neutral-200 pt-6 mb-12">
-          <span className="text-xs uppercase tracking-[0.2em]">
+          <span className="text-sm uppercase tracking-[0.2em] font-medium">
             Why Refer
           </span>
         </div>
@@ -94,7 +94,7 @@ export default function ReferPage() {
       {/* How it works */}
       <section className="bg-neutral-50">
         <div className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
-          <span className="text-xs uppercase tracking-[0.2em] text-neutral-400 block mb-16">
+          <span className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium block mb-16">
             How It Works
           </span>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
@@ -121,7 +121,7 @@ export default function ReferPage() {
       <section className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-24">
           <div>
-            <span className="text-xs uppercase tracking-[0.2em] text-neutral-400 block mb-10">
+            <span className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium block mb-10">
               What We&apos;re Looking For
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.15]">
@@ -152,7 +152,7 @@ export default function ReferPage() {
             {/* Left */}
             <div className="flex flex-col gap-8">
               <div>
-                <span className="text-xs uppercase tracking-[0.2em] text-neutral-400 block mb-6">
+                <span className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium block mb-6">
                   Make an Introduction
                 </span>
                 <h2 className="text-3xl md:text-4xl font-medium leading-[1.15]">
@@ -166,14 +166,14 @@ export default function ReferPage() {
                 </p>
               </div>
               <div className="border-t border-neutral-200 pt-8 flex flex-col gap-3">
-                <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium">
                   Prefer to reach out directly?
                 </p>
                 <a
-                  href="mailto:info@tripellpartners.com"
+                  href="mailto:info@ironmark.capital"
                   className="text-sm text-black hover:opacity-50 transition-opacity duration-200"
                 >
-                  info@tripellpartners.com
+                  info@ironmark.capital
                 </a>
               </div>
             </div>

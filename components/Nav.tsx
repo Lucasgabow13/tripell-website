@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 const NAV_LINKS = [
   { label: "About", href: "/about" },
@@ -41,20 +42,30 @@ export default function Nav() {
     <motion.header
       initial={{ opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isLight ? "bg-transparent" : "bg-white/95 backdrop-blur-sm border-b border-neutral-200"
       }`}
     >
       <div className="max-w-[1500px] mx-auto px-[3vw] h-16 flex items-center justify-between">
         {/* Logo */}
-        <a
-          href="#"
-          className={`text-sm tracking-[0.2em] uppercase font-medium transition-colors duration-300 ${
-            isLight ? "text-white" : "text-black"
-          }`}
-        >
-          TriPell Partners
+        <a href="/" className="flex items-center group">
+          <svg
+            height="36"
+            viewBox="0 0 260 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ width: "auto" }}
+            className="transition-colors duration-300"
+          >
+            <circle cx="24" cy="24" r="18" stroke={isLight ? "#FFFFFF" : "#0a0a0a"} strokeWidth="1.2" />
+            <line x1="15.5" y1="16.5" x2="32.5" y2="16.5" stroke={isLight ? "#FFFFFF" : "#0a0a0a"} strokeWidth="1.2" strokeLinecap="round" />
+            <line x1="24" y1="16.5" x2="24" y2="31.5" stroke={isLight ? "#FFFFFF" : "#0a0a0a"} strokeWidth="1.2" strokeLinecap="round" />
+            <line x1="15.5" y1="31.5" x2="32.5" y2="31.5" stroke={isLight ? "#FFFFFF" : "#0a0a0a"} strokeWidth="1.2" strokeLinecap="round" />
+            <line x1="58" y1="11" x2="58" y2="37" stroke={isLight ? "rgba(255,255,255,0.28)" : "rgba(0,0,0,0.2)"} strokeWidth="0.8" />
+            <text x="72" y="23" fontFamily="Inter, sans-serif" fontWeight="300" fontSize="19" letterSpacing="4.5" fill={isLight ? "#FFFFFF" : "#0a0a0a"}>IRONMARK</text>
+            <text x="73" y="37" fontFamily="Inter, sans-serif" fontWeight="300" fontSize="11" letterSpacing="5" fill={isLight ? "rgba(255,255,255,0.45)" : "rgba(0,0,0,0.45)"}>CAPITAL</text>
+          </svg>
         </a>
 
         {/* Desktop nav */}
@@ -105,16 +116,18 @@ export default function Nav() {
           </div>
 
           {/* Get In Touch CTA */}
-          <a
-            href="/contact"
-            className={`text-xs uppercase tracking-[0.15em] px-4 py-2 border transition-all duration-300 ${
-              isLight
-                ? "border-white text-white hover:bg-white hover:text-black"
-                : "border-black text-black hover:bg-black hover:text-white"
+          <HoverBorderGradient
+            as="a"
+            containerClassName={`cursor-pointer transition-all duration-300 ${
+              isLight ? "" : "bg-white/10 hover:bg-white/20 border-neutral-300"
             }`}
+            className={`text-xs uppercase tracking-[0.15em] px-4 py-2 ${
+              isLight ? "bg-[#0a0a0a] text-white" : "bg-white text-[#0a0a0a]"
+            }`}
+            onClick={() => { window.location.href = '/contact'; }}
           >
             Get In Touch
-          </a>
+          </HoverBorderGradient>
         </nav>
 
         {/* Mobile hamburger */}

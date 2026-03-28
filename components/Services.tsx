@@ -33,8 +33,8 @@ const COLUMNS = [
     ],
   },
   {
-    id: "tripell",
-    title: "TriPell Partners",
+    id: "ironmark",
+    title: "Ironmark Capital",
     highlight: true,
     items: [
       { yes: true, text: "Long-term home — we don't flip" },
@@ -58,17 +58,17 @@ const itemVariants: Variants = {
 };
 
 export default function Services() {
-  const [active, setActive] = useState("tripell");
+  const [active, setActive] = useState("ironmark");
   const reduced = useReducedMotion();
 
   const activeCol = COLUMNS.find((c) => c.id === active)!;
 
   return (
-    <section id="difference" className="bg-black text-white">
-      <div className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
+    <section id="difference" className="bg-[#0a0a0a] text-white grain relative">
+      <div className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32 relative z-10">
         <FadeInUp>
-          <span className="text-xs uppercase tracking-[0.2em] text-white/40 block mb-16">
-            The TriPell Difference
+          <span className="text-sm uppercase tracking-[0.2em] text-white/60 font-medium block mb-16">
+            The Ironmark Difference
           </span>
         </FadeInUp>
 
@@ -79,17 +79,24 @@ export default function Services() {
               <button
                 key={col.id}
                 onClick={() => setActive(col.id)}
-                className={`relative px-6 py-3 text-xs uppercase tracking-[0.15em] transition-all duration-200 text-left sm:text-center ${
+                className={`relative px-6 py-3 text-xs uppercase tracking-[0.15em] transition-all duration-300 text-left sm:text-center ${
                   col.highlight
                     ? active === col.id
-                      ? "text-black bg-white"
-                      : "text-white border border-white/50 hover:border-white hover:text-white"
+                      ? "text-black bg-white shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                      : "text-white border border-white/40 bg-white/10 hover:bg-white/20 hover:border-white/60 hover:shadow-[0_0_16px_rgba(255,255,255,0.15)]"
                     : active === col.id
                     ? "text-white"
                     : "text-white/30 hover:text-white/60"
                 }`}
               >
                 {col.title}
+                {col.highlight && active !== col.id && (
+                  <motion.span
+                    className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-white/70"
+                    animate={{ opacity: [1, 0.4, 1], scale: [1, 1.2, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                )}
                 {active === col.id && !col.highlight && (
                   <motion.div
                     layoutId="tab-indicator"
@@ -116,7 +123,7 @@ export default function Services() {
               >
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.15] mb-6">
                   {activeCol.highlight
-                    ? "Why founders choose TriPell."
+                    ? "Why founders choose Ironmark."
                     : activeCol.id === "pe"
                     ? "What PE does well — and where it falls short."
                     : "Strategics bring synergies. And complications."}

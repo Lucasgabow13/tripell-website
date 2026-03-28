@@ -7,25 +7,25 @@ const TEAM = [
   {
     name: "Lucas Gabow",
     role: "Managing Partner, Founder",
-    photo: "/36e307532_PNGimage.png",
+    photo: "/lucas-gabow.png",
     bio: "Lucas Gabow is a New York-based entrepreneur and operator with a background in storytelling, media, and high-impact digital growth. He began his career building and scaling digital platforms for founders and creators, helping shape brand narratives that reached millions and translated attention into durable businesses. More recently, Lucas has moved into hands-on operations and ownership — including as a partner at Protocol Health, a modern longevity clinic. He is driven by a simple philosophy: buy and build businesses the right way, with care for people, respect for legacy, and a commitment to long-term value creation.",
   },
   {
     name: "Carl Wolf",
     role: "Managing Partner, Head of Operations",
-    photo: "/14634b280_image.png",
+    photo: "/carl-wolf.png",
     bio: "Carl Wolf is a seasoned operator, investor, and consultant with experience in scaling high-growth technology companies. He has held executive roles overseeing marketing, business development, sales, and operations — including COO of LanzaTech (IPO 2023) and Chief Commercial & COO of Newlab. His commercial experience spans capital raising, licensing, and complex deal structures. Earlier in his career, Carl worked as a management consultant in Washington, DC. He holds a BA from UMBC, an MS from NYIT, and an MBA from Northwestern's Kellogg School of Management. He lives in Westchester, New York with his wife and two children.",
   },
   {
     name: "Brian Cinelli",
     role: "Managing Partner, Head of Capital Markets",
-    photo: "/d4a973afa_IMG_57452.jpg",
+    photo: "/brian-cinelli.jpg",
     bio: "Brian Cinelli is an operator and investor with experience building and scaling multi-location operating businesses. He is currently a co-owner and operator of multi-location companies, directly involved in scaling operations, building management teams, and driving revenue growth. Previously, Brian served as a Vice President at Eastcom Associates, a distributor in the underground utility sector, where he led product development, sales, and growth strategy. He brings a hands-on operating background and a disciplined, execution-focused approach to sourcing and building platform businesses.",
   },
   {
     name: "Joseph Garvey",
     role: "Managing Partner",
-    photo: "/cd0edaeb2_Profile.jpg",
+    photo: "/joseph-garvey.jpg",
     bio: "Joseph Garvey is a founder-operator building scalable, service-based businesses. He is the founder of Protocol Health, a physician-led, multi-state longevity and health-optimization platform operating through a hybrid in-clinic and telehealth model. His background spans healthcare, civic technology, and digital media. He brings deep operational rigor, data-driven growth strategy, and a long-term ownership mindset to every business he builds and partners with.",
   },
 ];
@@ -52,14 +52,14 @@ export default function AboutPage() {
       {/* Our Story */}
       <section className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
         <FadeInUp>
-          <span className="text-xs uppercase tracking-[0.2em] text-neutral-400 block mb-16">
+          <span className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium block mb-16">
             Our Story
           </span>
         </FadeInUp>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-24">
           <FadeInUp delay={0.1} className="flex flex-col gap-5">
             <p className="text-sm text-neutral-500 leading-relaxed">
-              TriPell was built on a simple frustration.
+              Ironmark was built on a simple frustration.
             </p>
             <p className="text-sm text-neutral-500 leading-relaxed">
               We kept seeing what happened when great businesses got sold to the
@@ -68,7 +68,7 @@ export default function AboutPage() {
               into a line item on someone&apos;s portfolio spreadsheet.
             </p>
             <p className="text-sm text-neutral-500 leading-relaxed">
-              We started TriPell because we wanted to be a different kind of
+              We started Ironmark because we wanted to be a different kind of
               buyer. Not a fund with an exit mandate. Not a strategic acquirer
               looking to absorb your brand into something bigger. Just a group
               of operators who genuinely believe that great businesses deserve
@@ -83,14 +83,14 @@ export default function AboutPage() {
               what kind of buyer would we actually want?
             </p>
             <p className="text-sm text-neutral-500 leading-relaxed">
-              The answer shaped everything about how TriPell operates.
+              The answer shaped everything about how Ironmark operates.
               Long-term ownership. Hands-on operations. Founder-friendly
               transitions. Decisions made for the health of the business — not
               for a quarterly report or an eventual exit.
             </p>
             <p className="text-sm text-neutral-500 leading-relaxed">
               We are entrepreneurs first. We respect what it takes to build
-              something real. And we built TriPell to be the company we&apos;d be
+              something real. And we built Ironmark to be the company we&apos;d be
               proud to sell to ourselves.
             </p>
           </FadeInUp>
@@ -101,7 +101,7 @@ export default function AboutPage() {
       <section className="bg-neutral-50">
         <div className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
           <FadeInUp>
-            <span className="text-xs uppercase tracking-[0.2em] text-neutral-400 block mb-16">
+            <span className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium block mb-16">
               How We Operate
             </span>
           </FadeInUp>
@@ -166,7 +166,7 @@ export default function AboutPage() {
       {/* Team */}
       <section className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
         <FadeInUp>
-          <span className="text-xs uppercase tracking-[0.2em] text-neutral-400 block mb-16">
+          <span className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium block mb-16">
             Our Team
           </span>
         </FadeInUp>

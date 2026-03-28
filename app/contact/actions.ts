@@ -25,7 +25,7 @@ export async function submitContact(
   }
 
   const { error } = await resend.emails.send({
-    from: "Ironmark Capital Website <onboarding@resend.dev>",
+    from: "Ironmark Capital <noreply@ironmark.capital>",
     to: "info@ironmark.capital",
     replyTo: email,
     subject: `New inquiry from ${name}${business ? ` — ${business}` : ""}`,

@@ -14,7 +14,7 @@ const MORE_LINKS = [
   { label: "Refer a Deal", href: "/refer" },
 ];
 
-export default function Nav() {
+export default function Nav({ forceDark = false }: { forceDark?: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const [atTop, setAtTop] = useState(true);
@@ -36,7 +36,7 @@ export default function Nav() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  const isLight = atTop && !menuOpen;
+  const isLight = !forceDark && atTop && !menuOpen;
 
   return (
     <motion.header

@@ -194,9 +194,9 @@ export default function InvestmentCriteriaPage() {
 
       {/* Philosophy */}
       <section className="max-w-[1500px] mx-auto px-[3vw] py-24 lg:py-32">
-        <span className="text-sm uppercase tracking-[0.2em] text-neutral-500 font-medium block mb-16">
+        <h3 className="text-lg font-medium mb-16 pb-6 border-b border-neutral-200">
           Why It Matters
-        </span>
+        </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-24">
           <div className="flex flex-col gap-5">
             <p className="text-sm text-neutral-500 leading-relaxed">

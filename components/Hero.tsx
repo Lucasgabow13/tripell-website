@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import Link from "next/link";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 const TEXT = "A long-term home for great businesses.";
@@ -141,15 +142,15 @@ export default function Hero() {
             >
               Get In Touch
             </HoverBorderGradient>
-            <a
-              href="#criteria"
+            <Link
+              href="/investment-criteria"
               className="text-xs uppercase tracking-[0.15em] text-white/50 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
             >
               View Investment Criteria
               <span className="group-hover:translate-x-1 transition-transform duration-300">
                 &rarr;
               </span>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>

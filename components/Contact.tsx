@@ -34,7 +34,7 @@ export default function Contact() {
             <HoverBorderGradient
               as="a"
               containerClassName="cursor-pointer"
-              className="text-xs uppercase tracking-[0.15em] px-8 py-4 bg-[#0a0a0a] text-white"
+              className="text-xs uppercase tracking-[0.15em] px-6 py-3 bg-[#0a0a0a] text-white"
               onClick={() => { window.location.href = '/contact'; }}
             >
               Get In Touch
